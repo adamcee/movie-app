@@ -4,17 +4,21 @@ import PropTypes from "prop-types";
 import Item from "./Item";
 
 function ItemsList({ items, type, updateItem }) {
+  console.log(items);
+  console.log(type);
+
+  const filteredItems = items.filter((item) => item.type === type);
+  console.log(filteredItems);
+
   return (
     <div>
       {type} List
       <ul>
-        {items
-          .filter((item) => item.type === type)
-          .map((item, index) => (
-            <div key={type + "-" + index}>
-              <Item item={item} updateItem={updateItem} />
-            </div>
-          ))}
+        {filteredItems.map((item, index) => (
+          <div key={type + "-" + index}>
+            <Item item={item} updateItem={updateItem} />
+          </div>
+        ))}
       </ul>
     </div>
   );
