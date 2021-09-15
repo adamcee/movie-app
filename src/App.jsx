@@ -74,18 +74,18 @@ function App(props) {
             <Link to="/">Selected Items</Link>
           </div>
           <div>
-            <Link to={`/${TYPE_NAMES.fruits}`}>Fruits</Link>
+            <Link to="fruit">Fruits</Link>
           </div>
           <div>
-            <Link to={`/${TYPE_NAMES.vegetables}`}>Vegetables</Link>
+            <Link to="vegetable">Vegetables</Link>
           </div>
         </div>
         <Switch>
-          <Route path="/fruits">
-            <ItemsList items={items} type={"fruit"} updateItem={updateItem} />
+          <Route path="/fruit">
+            <ItemsList items={items} type="fruit" updateItem={updateItem} />
           </Route>
-          <Route path="/vegetables">
-            <ItemsList items={items} type={"fruit"} updateItem={updateItem} />
+          <Route path="/vegetable">
+            <ItemsList items={items} type="vegetable" updateItem={updateItem} />
           </Route>
           <Route path="/">
             <SelectedItems items={items} />
