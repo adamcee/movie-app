@@ -4,24 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const songs = [
-  {
-    artist: "Talking Heads",
-    title:  "Once in a Lifetime",
-  },
-  {
-    artist: "Talking Heads",
-    title:  "Psycho Killer",
-  },
-  {
-    artist: "Talking Heads",
-    title:  "Life During Wartime",
-  },
-]
-
 ReactDOM.render(
   <React.StrictMode>
-    <App songs={songs} />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
